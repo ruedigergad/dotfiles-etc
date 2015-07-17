@@ -1,0 +1,14 @@
+#!/bin/bash
+
+rm -f ~/.vimrc
+ln -s $PWD/.vimrc ~/.vimrc
+
+mkdir -p ~/.config/fish/functions
+rm -f ~/.config/fish/functions/fish_user_key_bindings.fish
+rm -f ~/.config/fish/config.fish
+ln -s $PWD/.config/fish/functions/fish_user_key_bindings.fish ~/.config/fish/functions/fish_user_key_bindings.fish
+ln -s $PWD/.config/fish/config.fish ~/.config/fish/config.fish
+
+mkdir -p ~/.config/terminator
+ln -s $PWD/.config/terminator/config ~/.config/terminator/config
+
