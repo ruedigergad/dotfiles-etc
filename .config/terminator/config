@@ -1,7 +1,6 @@
 [global_config]
-  tab_position = top
-  suppress_multiple_term_dialog = True
   window_state = maximise
+  suppress_multiple_term_dialog = True
 [keybindings]
   resize_left = <Shift>Left
   next_tab = <Ctrl><Alt>Right
@@ -23,10 +22,12 @@
   go_right = <Ctrl>Right
 [profiles]
   [[default]]
-    scrollbar_position = disabled
-    scrollback_lines = 10000
+    scrollbar_position = hidden
     background_image = None
-    foreground_color = "#FFFFFF"
+    scrollback_lines = 10000
+    use_system_font = False
+    font = Mono 19
+    foreground_color = "#ffffff"
     scroll_on_output = False
     show_titlebar = False
 [layouts]
