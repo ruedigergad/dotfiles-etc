@@ -28,6 +28,7 @@ set sessionoptions=blank,buffers,curdir,folds,globals,help,localoptions,options,
 set t_Co=256
 colorscheme vividchalk
 "colorscheme desert256
+set guifont=Monospace\ 19
 
 " Enable folding.
 set foldmethod=syntax
