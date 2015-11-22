@@ -28,7 +28,7 @@ set sessionoptions=blank,buffers,curdir,folds,globals,help,localoptions,options,
 set t_Co=256
 colorscheme vividchalk
 "colorscheme desert256
-set guifont=Monospace\ 19
+set guifont=Monospace\ 10
 
 " Enable folding.
 set foldmethod=syntax
@@ -103,14 +103,14 @@ imap <S-A-C-Down> <ESC>:bdelete<CR>a
 
 " Shortcuts for windows
 " Switching windows
-map <C-Left> <C-w><Left>
-map <C-Right> <C-w><Right>
-imap <C-Left> <ESC><C-w><Left>
-imap <C-Right> <ESC><C-w><Right>
-map <C-Up> <C-w><Up>
-map <C-Down> <C-w><Down>
-imap <C-Up> <ESC><C-w><Up>
-imap <C-Down> <ESC><C-w><Down>
+map <C-A-Left> <C-w><Left>
+map <C-A-Right> <C-w><Right>
+imap <C-A-Left> <ESC><C-w><Left>
+imap <C-A-Right> <ESC><C-w><Right>
+map <C-A-Up> <C-w><Up>
+map <C-A-Down> <C-w><Down>
+imap <C-A-Up> <ESC><C-w><Up>
+imap <C-A-Down> <ESC><C-w><Down>
 " Resizing windows
 map <S-Left> <C-w>3<
 map <S-Right> <C-w>3>
@@ -130,15 +130,15 @@ imap <S-A-Down> <ESC>:close<CR>i
 
 " Shortcuts for tabs
 " Switching tabs
-map <C-A-Left> gT
-map <C-A-Right> gt
-imap <C-A-Left> <ESC>gTi
-imap <C-A-Right> <ESC>gti
+map <C-Left> gT
+map <C-Right> gt
+imap <C-Left> <ESC>gTi
+imap <C-Right> <ESC>gti
 " New / Close tab
-map <C-A-Up> :tab split<CR>
-map <C-A-Down> :tabclose<CR>
-imap <C-A-Up> <ESC>:tab split<CR>i
-imap <C-A-Down> <ESC>:tabclose<CR>i
+map <C-Up> :tab split<CR>
+map <C-Down> :tabclose<CR>
+imap <C-Up> <ESC>:tab split<CR>i
+imap <C-Down> <ESC>:tabclose<CR>i
 
 " Eclipse-like completion
 imap <C-Space> <C-n>
@@ -208,11 +208,16 @@ map <C-PAGEDOWN> :TlistToggle<CR>
 "imap <C-PAGEUP> <ESC>:TlistOpen<CR>
 imap <C-PAGEDOWN> <ESC>:TlistToggle<CR>i
 
-" NERDTree plug-in - https://github.com/scrooloose/nerdtree https://github.com/scrooloose/nerdtree
-map <C-End> :NERDTreeToggle<CR>
-imap <C-End> <ESC>:NERDTreeToggle<CR>i
+" :Explore
+let g:netrw_altv=1
+let g:netrw_banner=0
+let g:netrw_browse_split=4
+let g:netrw_liststyle=3
+let g:netrw_winsize=20
+map <C-End> :Sexplore!<CR>
+imap <C-End> <ESC>:Sexplore!<CR>i
 "map <C-b> :Bookmark 
-let NERDTreeIgnore=['\.aux$', '\.bbl$', '\.blg$', '\.idx$', '\.ilg$', '\.ind$', '\.lof$', '\.log$', '\.lol$', '\.lot$', '\.nlo$', '\.nls$', '\.out$', '\.pdf$', '\.toc$', '\.o$'] 
+"let NERDTreeIgnore=['\.aux$', '\.bbl$', '\.blg$', '\.idx$', '\.ilg$', '\.ind$', '\.lof$', '\.log$', '\.lol$', '\.lot$', '\.nlo$', '\.nls$', '\.out$', '\.pdf$', '\.toc$', '\.o$'] 
 
 " buftabs plug-in - http://www.vim.org/scripts/script.php?script_id=1664
 "let g:buftabs_only_basename=1
@@ -312,6 +317,6 @@ autocmd FileType clojure call TurnOnClojureFolding()
 
 " Maximize gvim
 if has("gui_running")
-  set lines=999 columns=999
+  set lines=40 columns=120
 endif
 
