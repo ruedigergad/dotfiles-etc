@@ -3,30 +3,33 @@
   suppress_multiple_term_dialog = True
 [keybindings]
   resize_left = <Shift>Left
-  next_tab = <Ctrl><Alt>Right
-  go_up = <Ctrl>Up
+  next_tab = <Ctrl>Right
+  prev_tab = <Ctrl>Left
   resize_up = <Shift>Up
   toggle_scrollbar = <Shift><Alt>Down
   split_horiz = <Shift><Alt>Right
   full_screen = <Shift><Alt>Left
-  prev_tab = <Ctrl><Alt>Left
-  go_down = <Ctrl>Down
-  close_term = <Ctrl><Alt>Down
+  go_down = <Ctrl><Alt>Down
+  go_left = <Ctrl><Alt>Left
+  go_right = <Ctrl><Alt>Right
+  go_up = <Ctrl><Alt>Up
+  close_term = <Ctrl>Down
+  new_tab = <Ctrl>Up
   split_vert = <Shift><Alt>Up
   ungroup_all = <Ctrl><Shift>g
   group_all = <Ctrl>g
-  new_tab = <Ctrl><Alt>Up
-  go_left = <Ctrl>Left
   resize_right = <Shift>Right
   resize_down = <Shift>Down
-  go_right = <Ctrl>Right
 [profiles]
   [[default]]
     scrollbar_position = hidden
+    background_darkness = 0.7
     background_image = None
+    background_type = transparent
+    disable_real_transparency = True
     scrollback_lines = 10000
     use_system_font = False
-    font = Mono 19
+    font = Mono 10
     foreground_color = "#ffffff"
     scroll_on_output = False
     show_titlebar = False
