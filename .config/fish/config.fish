@@ -23,4 +23,6 @@ end
 # End: Taken from https://wiki.archlinux.org/index.php/Fish#Prompt
 
 set -gx PATH ~/bin $PATH
+set -gx PAGER less
+set -gx EDITOR vim
 
