@@ -103,23 +103,23 @@ imap <S-A-C-Down> <ESC>:bdelete<CR>a
 
 " Shortcuts for windows
 " Switching windows
-map <C-A-Left> <C-w><Left>
-map <C-A-Right> <C-w><Right>
-imap <C-A-Left> <ESC><C-w><Left>
-imap <C-A-Right> <ESC><C-w><Right>
-map <C-A-Up> <C-w><Up>
-map <C-A-Down> <C-w><Down>
-imap <C-A-Up> <ESC><C-w><Up>
-imap <C-A-Down> <ESC><C-w><Down>
+map <S-Left> <C-w><Left>
+map <S-Right> <C-w><Right>
+imap <S-Left> <ESC><C-w><Left>
+imap <S-Right> <ESC><C-w><Right>
+map <S-Up> <C-w><Up>
+map <S-Down> <C-w><Down>
+imap <S-Up> <ESC><C-w><Up>
+imap <S-Down> <ESC><C-w><Down>
 " Resizing windows
-map <S-Left> <C-w>3<
-map <S-Right> <C-w>3>
-imap <S-Left> <ESC><C-w>3<a
-imap <S-Right> <ESC><C-w>3>a
-map <S-Up> <C-w>2+
-map <S-Down> <C-w>2-
-imap <S-Up> <ESC><C-w>2+a
-imap <S-Down> <ESC><C-w>2-a
+map <C-A-Left> <C-w>3<
+map <C-A-Right> <C-w>3>
+imap <C-A-Left> <ESC><C-w>3<a
+imap <C-A-Right> <ESC><C-w>3>a
+map <C-A-Up> <C-w>2+
+map <C-A-Down> <C-w>2-
+imap <C-A-Up> <ESC><C-w>2+a
+imap <C-A-Down> <ESC><C-w>2-a
 " Splitting and closing windows
 map <S-A-Up> :vsplit<CR>
 map <S-A-Right> :split<CR>
