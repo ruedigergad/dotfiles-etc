@@ -1,6 +1,12 @@
 "#######################
 "# General Vim Options #
 "#######################
+" Use pathogen.
+execute pathogen#infect()
+
+" Re-map leader
+let mapleader = ","
+
 " Disable compatibility mode; we actually use vim and not vi.
 set nocompatible
 
@@ -219,33 +225,13 @@ imap <C-End> <ESC>:Sexplore!<CR>i
 "map <C-b> :Bookmark 
 "let NERDTreeIgnore=['\.aux$', '\.bbl$', '\.blg$', '\.idx$', '\.ilg$', '\.ind$', '\.lof$', '\.log$', '\.lol$', '\.lot$', '\.nlo$', '\.nls$', '\.out$', '\.pdf$', '\.toc$', '\.o$'] 
 
-" buftabs plug-in - http://www.vim.org/scripts/script.php?script_id=1664
-"let g:buftabs_only_basename=1
-"let g:buftabs_in_statusline=1
-"let g:buftabs_active_highlight_group="Visual"
-"let g:buftabs_marker_modified = "*"
-
 " ConqueShell plug-in - https://github.com/vim-scripts/Conque-Shell http://www.vim.org/scripts/script.php?script_id=2771
 map <C-b> :ConqueTerm bash<CR>
 imap <C-b> <ESC>:ConqueTerm bash<CR>
 
-" MiniBufExplorer plug-in - https://github.com/fholgado/minibufexpl.vim  http://www.vim.org/scripts/script.php?script_id=159
-" We want to always show the MiniBufExplorer
-"let g:miniBufExplorerMoreThanOne=0
-
 " shell plug-in - https://github.com/xolox/vim-shell
 map <C-o> :Open<CR>
 imap <C-o> <ESC>:Open<CR>
-
-" leovim - https://github.com/bastibl/leo.vim
-" Installation on Fedora:
-" yum install perl-CPAN
-" As user:
-" cpan #afterwards restart bash
-" cpan install HTML::TableParser
-" This can also be very conveniently used from the command line via 'leo ...'.
-map <C-l> :Leo <cword><CR>
-imap <C-l> <ESC>:Leo <cword><CR>i
 
 " vim-latex http://vim-latex.sourceforge.net/ 
 let g:tex_flavor='latex'
@@ -253,67 +239,15 @@ let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_ViewRule_ps = 'okular'
 let g:Tex_ViewRule_pdf = 'okular'
 let g:Tex_ViewRule_dvi = 'okular'
-let mapleader = "<<"
-let g:Tex_Leader = "<"
-let g:Tex_Leader2 = "<"
+" let g:Tex_Leader = "<"
+" let g:Tex_Leader2 = "<"
 " Editor command to enable inverse search in okular: gvim -c ":RemoteOpen +%l %f"
 " Note: Use <shift>+<left_mouse_click> for inverse search. For forward search use \ls.
 " https://www.math.tu-berlin.de/fileadmin/i26/download/AG_ModNumDiff/FG_NumMath/seminars/toolseminar/ts5invSear.pdf
 "let g:Tex_Debug=1
 " Show debug output with: :call Tex_PrintDebug()
 
-" VimClojure https://github.com/vim-scripts/VimClojure http://www.vim.org/scripts/script.php?script_id=2501
-let vimclojure#HighlightBuiltins=1 
-let vimclojure#ParenRainbow=1
-
-let tlist_clojure_settings = 'lisp;f:function'
-let Tlist_Exit_OnlyWindow=1
-
-"let vimclojure#WantNailgun = 1 
-"let vimclojure#NailgunClient = "/usr/local/bin/ng"
-
-" ---------------------------------------------------------------------------
-" Automagic Clojure folding on defn's and defmacro's
-"
-" Taken from: http://writequit.org/blog/?p=413
-function GetClojureFold()
-      if getline(v:lnum) =~ '^\s*(defn.*\s'
-            return ">1"
-      elseif getline(v:lnum) =~ '^\s*(defmacro.*\s'
-            return ">1"
-      elseif getline(v:lnum) =~ '^\s*(defmethod.*\s'
-            return ">1"
-      elseif getline(v:lnum) =~ '^\s*$'
-            let my_cljnum = v:lnum
-            let my_cljmax = line("$")
-
-            while (1)
-                  let my_cljnum = my_cljnum + 1
-                  if my_cljnum > my_cljmax
-                        return "<1"
-                  endif
-
-                  let my_cljdata = getline(my_cljnum)
-
-" If we match an empty line, stop folding
-                  if my_cljdata =~ '^$'
-                        return "<1"
-                  else
-                        return "="
-                  endif
-            endwhile
-      else
-            return "="
-      endif
-endfunction
-
-function TurnOnClojureFolding()
-      setlocal foldexpr=GetClojureFold()
-      setlocal foldmethod=expr
-endfunction
-
-" Turn on Clojure folding when we open a Clojure file.
-autocmd FileType clojure call TurnOnClojureFolding()
+let g:rainbow_active = 1
 
 " Maximize gvim
 if has("gui_running")
