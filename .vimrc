@@ -4,7 +4,7 @@
 " Use pathogen.
 execute pathogen#infect()
 
-" Re-map leader
+" Re-map leader.
 let mapleader = ","
 
 " Disable compatibility mode; we actually use vim and not vi.
