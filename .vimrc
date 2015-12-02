@@ -249,10 +249,12 @@ let g:Tex_ViewRule_dvi = 'okular'
 "let g:Tex_Debug=1
 " Show debug output with: :call Tex_PrintDebug()
 
-let g:rainbow_active = 1
-
 " Maximize gvim
 if has("gui_running")
   set lines=40 columns=120
 endif
+
+let g:rainbow_active = 1
+
+autocmd BufReadPost * RainbowToggle
 
