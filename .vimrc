@@ -246,7 +246,7 @@ let g:Tex_ViewRule_dvi = 'okular'
 " Editor command to enable inverse search in okular: gvim -c ":RemoteOpen +%l %f"
 " Note: Use <shift>+<left_mouse_click> for inverse search. For forward search use \ls.
 " https://www.math.tu-berlin.de/fileadmin/i26/download/AG_ModNumDiff/FG_NumMath/seminars/toolseminar/ts5invSear.pdf
-"let g:Tex_Debug=1
+" let g:Tex_Debug=1
 " Show debug output with: :call Tex_PrintDebug()
 
 " Maximize gvim
@@ -254,7 +254,8 @@ if has("gui_running")
   set lines=40 columns=120
 endif
 
+" Rainbow parentheses:
+" https://github.com/luochen1990/rainbow
 let g:rainbow_active = 1
-
 autocmd BufReadPost * RainbowToggle
 
