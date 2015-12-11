@@ -1,0 +1,14 @@
+
+noremap <silent><buffer> t :call SetNextTag()<cr>
+
+" This setting loads the checkboxes, tags and smart_paste plugins as default.
+let g:vo_modules_load = "checkbox:tags:smart_paste"
+
+"User Preferences ***************************************************
+let maplocalleader = ','		" uncomment for compatibility with
+
+let g:cbTags = [
+\['3_Low','2_Normal','1_High','0_URGENT']
+\]
+
+" vim: filetype=vim
