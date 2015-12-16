@@ -2,7 +2,7 @@
 let maplocalleader = ','		" uncomment for compatibility with
 
 noremap <silent><buffer> t :call SetNextTag()<cr>
-noremap <silent><buffer> <localleader>i mx$:call InsertId()<cr>:call InsertTimeStamp()<cr>`x:delmarks x<cr>
+noremap <silent><buffer> <localleader>i :call AppendIdAndTimeStamp()<cr>
 
 " This setting loads the checkboxes, tags and smart_paste plugins as default.
 let g:vo_modules_load = "checkbox:tags:smart_paste"
