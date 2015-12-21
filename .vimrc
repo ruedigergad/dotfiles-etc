@@ -223,7 +223,7 @@ let g:netrw_winsize=20
 map <C-End> :Sexplore!<CR>
 imap <C-End> <ESC>:Sexplore!<CR>i
 " let g:netrw_list_hide= netrw_gitignore#Hide().'.*\.swp$'
-let g:netrw_list_hide='\.aux$,\.bbl$,\.blg$,\.idx$,\.ilg$,\.ind$,\.lof$,\.log$,\.lol$,\.lot$,\.nlo$,\.nls$,\.out$,\.pdf$,.*\.swp$,\.toc$,\.o$' 
+let g:netrw_list_hide='\.aux$,\.bbl$,\.blg$,\.idx$,\.ilg$,\.ind$,\.lof$,\.log$,\.lol$,\.lot$,\.nlo$,\.nls$,\.out$,\.pdf$,.*\.swo$,.*\.swp$,\.toc$,\.o$' 
 "map <C-b> :Bookmark 
 "let NERDTreeIgnore=['\.aux$', '\.bbl$', '\.blg$', '\.idx$', '\.ilg$', '\.ind$', '\.lof$', '\.log$', '\.lol$', '\.lot$', '\.nlo$', '\.nls$', '\.out$', '\.pdf$', '\.toc$', '\.o$'] 
 
