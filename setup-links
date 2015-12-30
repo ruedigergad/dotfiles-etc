@@ -13,3 +13,6 @@ mkdir -p ~/.config/terminator
 rm -f ~/.config/terminator/config
 ln -s $PWD/.config/terminator/config ~/.config/terminator/config
 
+rm -f ~/.vim
+ln -s $PWD/.vim ~/.vim
+
