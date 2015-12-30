@@ -1,0 +1,18 @@
+[submodule ".vim/bundle/syntastic"]
+	path = .vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule ".vim/bundle/vim-eastwood"]
+	path = .vim/bundle/vim-eastwood
+	url = https://github.com/venantius/vim-eastwood
+[submodule ".vim/bundle/vim-fireplace"]
+	path = .vim/bundle/vim-fireplace
+	url = https://github.com/tpope/vim-fireplace
+[submodule ".vim/bundle/vim-surround"]
+	path = .vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule ".vim/bundle/vim-todo-helper"]
+	path = .vim/bundle/vim-todo-helper
+	url = git@github.com:ruedigergad/vim-todo-helper.git
+[submodule ".vim/bundle/vimoutliner"]
+	path = .vim/bundle/vimoutliner
+	url = https://github.com/vimoutliner/vimoutliner.git
