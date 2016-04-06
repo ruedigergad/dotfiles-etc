@@ -16,3 +16,6 @@ ln -s $PWD/.config/terminator/config ~/.config/terminator/config
 rm -f ~/.vim
 ln -s $PWD/.vim ~/.vim
 
+rm -f ~/.conkyrc
+ln -s $PWD/.conkyrc ~/.conkyrc
+
