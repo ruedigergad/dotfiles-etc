@@ -1,35 +1,34 @@
 [global_config]
   window_state = maximise
   suppress_multiple_term_dialog = True
+  borderless = True
 [keybindings]
+  resize_left = <Ctrl><Alt>Left
   next_tab = <Ctrl>Right
-  prev_tab = <Ctrl>Left
+  go_up = <Shift>Up
+  resize_up = <Ctrl><Alt>Up
   toggle_scrollbar = <Shift><Alt>Down
   split_horiz = <Shift><Alt>Right
   full_screen = <Shift><Alt>Left
+  prev_tab = <Ctrl>Left
   go_down = <Shift>Down
-  go_left = <Shift>Left
-  go_right = <Shift>Right
-  go_up = <Shift>Up
-  resize_down = <Ctrl><Alt>Down
-  resize_left = <Ctrl><Alt>Left
-  resize_right = <Ctrl><Alt>Right
-  resize_up = <Ctrl><Alt>Up
   close_term = <Ctrl>Down
-  new_tab = <Ctrl>Up
   split_vert = <Shift><Alt>Up
   ungroup_all = <Ctrl><Shift>g
   group_all = <Ctrl>g
+  new_tab = <Ctrl>Up
+  go_left = <Shift>Left
+  resize_right = <Ctrl><Alt>Right
+  resize_down = <Ctrl><Alt>Down
+  go_right = <Shift>Right
 [profiles]
   [[default]]
     scrollbar_position = hidden
-    background_darkness = 0.8
-    background_image = None
-    background_type = transparent
-    disable_real_transparency = True
-    scrollback_lines = 10000
     use_system_font = False
-    font = Mono 10
+    background_darkness = 0.8
+    scrollback_lines = 10000
+    background_type = transparent
+    background_image = None
     foreground_color = "#ffffff"
     scroll_on_output = False
     show_titlebar = False
