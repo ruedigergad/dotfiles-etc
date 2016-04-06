@@ -31,4 +31,4 @@ show_graph_range no
 
 TEXT
 ${battery} | ${battery_time}
-${color grey}${freq_g} | ${downspeed} | ${upspeed}
+${freq_g} | ${cpu} | ${mem}
