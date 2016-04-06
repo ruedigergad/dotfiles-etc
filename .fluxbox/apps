@@ -1,0 +1,10 @@
+[app] (name=fbrun)
+  [Position]	(CENTER)	{0 0}
+  [Layer]	{2}
+[end]
+[app] (name=xbattbar)
+  [Layer]	{4}
+[end]
+[app] (name=gvim) (class=Gvim) (role=vim-1481-2695376821-1446626990)
+  [Deco]	{NORMAL}
+[end]

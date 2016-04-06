@@ -19,3 +19,6 @@ ln -s $PWD/.vim ~/.vim
 rm -f ~/.conkyrc
 ln -s $PWD/.conkyrc ~/.conkyrc
 
+rm -f ~/.fluxbox
+ln -s $PWD/.fluxbox ~/.fluxbox
+

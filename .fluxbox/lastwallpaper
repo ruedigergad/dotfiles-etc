@@ -1,0 +1,3 @@
+fbsetroot|-foreground white -solid white|style|:0.0
+fbsetroot|-foreground white -solid white|style|:1.0
+fbsetroot|-foreground white -solid white|style|unix:0.0
