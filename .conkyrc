@@ -13,7 +13,7 @@ use_xft yes
 xftfont DejaVu Sans Mono:size=7.75
 gap_x 0
 gap_y 0
-minimum_size 5 5
+minimum_size 140 20
 net_avg_samples 2
 no_buffers yes
 out_to_console no
