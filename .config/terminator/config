@@ -1,43 +1,45 @@
 [global_config]
-  window_state = maximise
-  suppress_multiple_term_dialog = True
   borderless = True
+  suppress_multiple_term_dialog = True
+  title_font = Nimbus Mono L Bold 18
+  title_use_system_font = False
+  window_state = maximise
 [keybindings]
-  resize_left = <Ctrl><Alt>Left
-  next_tab = <Ctrl>Right
-  go_up = <Shift>Up
-  resize_up = <Ctrl><Alt>Up
-  toggle_scrollbar = <Shift><Alt>Down
-  split_horiz = <Shift><Alt>Right
-  full_screen = <Shift><Alt>Left
-  prev_tab = <Ctrl>Left
-  go_down = <Shift>Down
   close_term = <Ctrl>Down
-  split_vert = <Shift><Alt>Up
-  ungroup_all = <Ctrl><Shift>g
+  full_screen = <Shift><Alt>Left
+  go_down = <Shift>Down
+  go_left = <Shift>Left
+  go_right = <Shift>Right
+  go_up = <Shift>Up
   group_all = <Ctrl>g
   new_tab = <Ctrl>Up
-  go_left = <Shift>Left
-  resize_right = <Ctrl><Alt>Right
+  next_tab = <Ctrl>Right
+  prev_tab = <Ctrl>Left
   resize_down = <Ctrl><Alt>Down
-  go_right = <Shift>Right
-[profiles]
-  [[default]]
-    scrollbar_position = hidden
-    use_system_font = False
-    background_darkness = 0.8
-    scrollback_lines = 10000
-    background_type = transparent
-    background_image = None
-    foreground_color = "#ffffff"
-    scroll_on_output = False
-    show_titlebar = False
+  resize_left = <Ctrl><Alt>Left
+  resize_right = <Ctrl><Alt>Right
+  resize_up = <Ctrl><Alt>Up
+  split_horiz = <Shift><Alt>Right
+  split_vert = <Shift><Alt>Up
+  toggle_scrollbar = <Shift><Alt>Down
+  ungroup_all = <Ctrl><Shift>g
 [layouts]
   [[default]]
     [[[child1]]]
-      type = Terminal
       parent = window0
+      type = Terminal
     [[[window0]]]
-      type = Window
       parent = ""
+      type = Window
 [plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.8
+    cursor_color = "#ffffff"
+    font = DejaVu Sans Mono Bold 18
+    foreground_color = "#ffffff"
+    scrollback_infinite = True
+    scrollback_lines = 10000
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
