@@ -34,7 +34,7 @@ set sessionoptions=blank,buffers,curdir,folds,globals,help,localoptions,options,
 set t_Co=256
 colorscheme vividchalk
 "colorscheme desert256
-set guifont=Monospace\ 18
+set guifont=Monospace\ 11
 
 " Enable folding.
 set foldmethod=syntax
@@ -241,8 +241,8 @@ let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_ViewRule_ps = 'okular'
 let g:Tex_ViewRule_pdf = 'okular'
 let g:Tex_ViewRule_dvi = 'okular'
-" let g:Tex_Leader = "<"
-" let g:Tex_Leader2 = "<"
+let g:Tex_Leader = "<"
+let g:Tex_Leader2 = "<"
 " Editor command to enable inverse search in okular: gvim -c ":RemoteOpen +%l %f"
 " Note: Use <shift>+<left_mouse_click> for inverse search. For forward search use \ls.
 " https://www.math.tu-berlin.de/fileadmin/i26/download/AG_ModNumDiff/FG_NumMath/seminars/toolseminar/ts5invSear.pdf
