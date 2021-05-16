@@ -567,22 +567,22 @@ function! s:IsBalanced()
         " Do not go before the last command prompt in the REPL buffer
         let matchb = prompt
     endif
-    let p1 = searchpair( '(', '', ')', 'brnmW', s:skip_sc, matchb )
-    let p2 = searchpair( '(', '', ')',  'rnmW', s:skip_sc, matchf )
+    let p1 = searchpair( '(', '', ')', 'brnmW', s:skip_sc, matchb, 2 )
+    let p2 = searchpair( '(', '', ')',  'rnmW', s:skip_sc, matchf, 2 )
     if !(p1 == p2) && !(p1 == p2 - 1 && line[c-1] == '(') && !(p1 == p2 + 1 && line[c-1] == ')')
         " Number of opening and closing parens differ
         return 0
     endif
 
     if &ft =~ '.*\(clojure\|scheme\|racket\).*'
-        let b1 = searchpair( '\[', '', '\]', 'brnmW', s:skip_sc, matchb )
-        let b2 = searchpair( '\[', '', '\]',  'rnmW', s:skip_sc, matchf )
+        let b1 = searchpair( '\[', '', '\]', 'brnmW', s:skip_sc, matchb, 2 )
+        let b2 = searchpair( '\[', '', '\]',  'rnmW', s:skip_sc, matchf, 2 )
         if !(b1 == b2) && !(b1 == b2 - 1 && line[c-1] == '[') && !(b1 == b2 + 1 && line[c-1] == ']')
             " Number of opening and closing brackets differ
             return 0
         endif
-        let b1 = searchpair( '{', '', '}', 'brnmW', s:skip_sc, matchb )
-        let b2 = searchpair( '{', '', '}',  'rnmW', s:skip_sc, matchf )
+        let b1 = searchpair( '{', '', '}', 'brnmW', s:skip_sc, matchb, 2 )
+        let b2 = searchpair( '{', '', '}',  'rnmW', s:skip_sc, matchf, 2 )
         if !(b1 == b2) && !(b1 == b2 - 1 && line[c-1] == '{') && !(b1 == b2 + 1 && line[c-1] == '}')
             " Number of opening and closing curly braces differ
             return 0

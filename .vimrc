@@ -10,8 +10,8 @@ let mapleader = ","
 " Disable compatibility mode; we actually use vim and not vi.
 set nocompatible
 
-" Most of my terminals use a light background.
-set background=light
+" Most of my terminals use a dark background.
+set background=dark
 
 " Enable filetype plugin.
 filetype plugin indent on
@@ -34,7 +34,7 @@ set sessionoptions=blank,buffers,curdir,folds,globals,help,localoptions,options,
 set t_Co=256
 colorscheme vividchalk
 "colorscheme desert256
-set guifont=Monospace\ 11
+set guifont=Monospace\ 12
 
 " Enable folding.
 set foldmethod=syntax
@@ -136,10 +136,10 @@ imap <S-A-Down> <ESC>:close<CR>i
 
 " Shortcuts for tabs
 " Switching tabs
-map <C-Left> gT
-map <C-Right> gt
-imap <C-Left> <ESC>gTi
-imap <C-Right> <ESC>gti
+map <C-PageUp> gT
+map <C-PageDown> gt
+imap <C-PageUp> <ESC>gTi
+imap <C-PageDown> <ESC>gti
 " New / Close tab
 map <C-Up> :tab split<CR>
 map <C-Down> :tabclose<CR>
@@ -210,9 +210,9 @@ let Tlist_Compact_Format = 1
 let Tlist_Enable_Fold_Column = 0
 let Tlist_GainFocus_On_ToggleOpen = 1
 "map <C-PAGEUP> :TlistOpen<CR>
-map <C-PAGEDOWN> :TlistToggle<CR>
+map <C-S-PageUp> :TlistToggle<CR>
 "imap <C-PAGEUP> <ESC>:TlistOpen<CR>
-imap <C-PAGEDOWN> <ESC>:TlistToggle<CR>i
+imap <C-S-PageUp> <ESC>:TlistToggle<CR>i
 
 " :Explore
 let g:netrw_altv=1
@@ -220,8 +220,10 @@ let g:netrw_banner=0
 let g:netrw_browse_split=4
 let g:netrw_liststyle=3
 let g:netrw_winsize=20
-map <C-End> :Sexplore!<CR>
-imap <C-End> <ESC>:Sexplore!<CR>i
+map <C-S-PageDown> :Sexplore!<CR>
+imap <C-S-PageDown> <ESC>:Sexplore!<CR>i
+"map <C-End> :Sexplore!<CR>
+"imap <C-End> <ESC>:Sexplore!<CR>i
 " let g:netrw_list_hide= netrw_gitignore#Hide().'.*\.swp$'
 let g:netrw_list_hide='\.aux$,\.bbl$,\.blg$,\.idx$,\.ilg$,\.ind$,\.lof$,\.log$,\.lol$,\.lot$,\.nlo$,\.nls$,\.out$,\.pdf$,.*\.swo$,.*\.swp$,\.toc$,\.o$' 
 "map <C-b> :Bookmark 

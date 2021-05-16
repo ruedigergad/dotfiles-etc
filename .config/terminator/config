@@ -1,26 +1,38 @@
 [global_config]
+  window_state = maximise
   borderless = True
   suppress_multiple_term_dialog = True
   title_font = Nimbus Mono L 10
-  window_state = maximise
 [keybindings]
-  full_screen = <Shift><Alt>Left
-  go_down = <Shift>Down
-  go_left = <Shift>Left
-  go_right = <Shift>Right
-  go_up = <Shift>Up
-  group_all = <Ctrl>g
   new_tab = <Ctrl>Up
-  next_tab = <Ctrl>Right
-  prev_tab = <Ctrl>Left
-  resize_down = <Ctrl><Alt>Down
-  resize_left = <Ctrl><Alt>Left
-  resize_right = <Ctrl><Alt>Right
-  resize_up = <Ctrl><Alt>Up
+  go_up = <Shift>Up
+  go_down = <Shift>Down
+  go_left = <Primary>Page_Up
+  go_right = <Primary>Page_Down
   split_horiz = <Shift><Alt>Right
   split_vert = <Shift><Alt>Up
   toggle_scrollbar = <Shift><Alt>Down
+  resize_up = <Ctrl><Alt>Up
+  resize_down = <Ctrl><Alt>Down
+  resize_left = <Ctrl><Alt>Left
+  resize_right = <Ctrl><Alt>Right
+  next_tab = <Primary>Page_Down
+  prev_tab = <Primary>Page_Up
+  full_screen = <Shift><Alt>Left
+  group_all = <Ctrl>g
   ungroup_all = <Ctrl><Shift>g
+[profiles]
+  [[default]]
+    background_darkness = 0.75
+    background_type = transparent
+    cursor_color = "#ffffff"
+    font = Monospace 12
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 10000
+    scrollback_infinite = True
+    use_system_font = False
 [layouts]
   [[default]]
     [[[child1]]]
@@ -30,13 +42,3 @@
       parent = ""
       type = Window
 [plugins]
-[profiles]
-  [[default]]
-    background_darkness = 0.8
-    cursor_color = "#ffffff"
-    font = Nimbus Mono L 10
-    foreground_color = "#ffffff"
-    scrollback_infinite = True
-    scrollback_lines = 10000
-    scrollbar_position = hidden
-    show_titlebar = False
